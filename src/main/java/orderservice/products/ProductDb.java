@@ -11,15 +11,15 @@ public class ProductDb {
     HashMap<String, Product> productHashMap = new HashMap<>();
 
     // Constructor
-    public ProductDb(List<Product> productsList) {
+    public ProductDb(ArrayList<Product> productsList) {
         for (Product product : productsList) {
-
+            productHashMap.put(product.getProductId(),product);
         }
     }
 
     // in der listmethode nehmen wir die Hashmap und wenden darauf die methode values (standardmethode) an. die values aus der Hashmap
     // übergeben wir an die neudefinierte Arraylist "products"!
-    public ArrayList<Product> list() {
+    public ArrayList<Product> list(){
         ArrayList<Product> products = new ArrayList<Product>(this.productHashMap.values());
         return products;
     }

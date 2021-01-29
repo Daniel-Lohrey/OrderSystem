@@ -20,23 +20,15 @@ class ProductDbTest {
         Product prod1 = new Product("1", "Gorchfok");
         Product prod2 = new Product("2", "SantaMaria");
         Product prod3 = new Product("3", "BlackPearl");
-
-        ArrayList<Product> prodList = new ArrayList<>(Arrays.asList(prod1, prod2, prod3));
-        System.out.println(prodList);
-
-
+        ArrayList<Product> expected = new ArrayList<Product>(Arrays.asList(prod1, prod2, prod3));
         // Constructor aufrufen
-
-        ProductDb Test = new ProductDb(prodList);
-
-
-        // ProductDb
+        ProductDb productDbTest = new ProductDb(expected);
 
         // when
-
+        ArrayList<Product> actual = productDbTest.list();
 
         // then
-        assertEquals(0, 0);
+        assertEquals(expected, actual);
     }
 
 }
