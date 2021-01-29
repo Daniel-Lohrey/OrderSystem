@@ -10,7 +10,12 @@ public class OrderDb {
         this.orderList = orderList;
     }
 
-    public ArrayList<Order> getOrderList() {
+    public ArrayList<Order> list() {
         return orderList;
     }
+    // add order to ArrayList
+    public void addOrder(Order newOrder){
+        this.orderList.add(newOrder);
+    }
+
 }

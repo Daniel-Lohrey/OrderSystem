@@ -8,9 +8,11 @@
     <artifactId>OrderSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <properties>
+
+   <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.target>${maven.compiler.source}</maven.compiler.target>
     </properties>
 
     <dependencyManagement>
@@ -31,9 +33,20 @@
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
+        <pluginManagement>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -44,6 +57,7 @@
                 <version>2.22.2</version>
             </plugin>
         </plugins>
-    </build>
+        </pluginManagement>
+   </build>
 
 </project>
