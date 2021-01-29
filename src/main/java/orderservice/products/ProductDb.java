@@ -4,14 +4,17 @@ import orderservice.orders.Order;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class ProductDb {
 
     HashMap<String, Product> productHashMap = new HashMap<>();
 
     // Constructor
-    public ProductDb(HashMap<String, Product> productHashMap) {
-        this.productHashMap = productHashMap;
+    public ProductDb(List<Product> productsList) {
+        for (Product product : productsList) {
+
+        }
     }
 
     // in der listmethode nehmen wir die Hashmap und wenden darauf die methode values (standardmethode) an. die values aus der Hashmap

@@ -1,16 +1,17 @@
 package orderservice.products;
 
-import org.junit.Test;
+
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import static junit.framework.TestCase.assertEquals;
-//import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 class ProductDbTest {
-
     @Test
     @DisplayName("ProductDb List Method Test")
     public void TestProductDbList(){
@@ -37,6 +38,5 @@ class ProductDbTest {
         // then
         assertEquals(0, 0);
     }
-
 
 }
